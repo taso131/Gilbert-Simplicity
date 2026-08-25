@@ -15,6 +15,29 @@ nav?.querySelectorAll("a").forEach((link) => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+const contactForm = document.querySelector(".contact-form");
+const contactFormStatus = contactForm?.querySelector(".form-status");
+
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(contactForm);
+  const recipient = contactForm.dataset.recipient;
+  const subject = String(formData.get("subject") || "");
+  const body = [
+    `Name: ${formData.get("name") || ""}`,
+    `E-Mail: ${formData.get("email") || ""}`,
+    "",
+    String(formData.get("message") || "")
+  ].join("\n");
+
+  if (contactFormStatus) {
+    contactFormStatus.textContent = "Die Nachricht wird in Ihrem E-Mail-Programm geöffnet …";
+  }
+
+  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
 const carousel = document.querySelector(".hero-art");
 const carouselTrack = carousel?.querySelector(".hero-carousel-track");
 const carouselSlides = [...(carousel?.querySelectorAll(".hero-slide") || [])];

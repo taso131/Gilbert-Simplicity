@@ -19,6 +19,7 @@
       <span>Menü</span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a>
       <a href="work.html">Werke</a>
       <a href="gemaeldekatalog.html">Gemäldekatalog</a>
       <a href="about.html">Über mich</a>
@@ -29,10 +30,57 @@
 
   <main id="main">
     <section class="contact">
-      <p class="eyebrow">Kontakt</p>
-      <h1>Für Ausstellungen, Auftragsarbeiten<br>und Atelierbesuche.</h1>
-      <a class="contact-link" href="mailto:studio@example.com">studio@example.com</a>
-      <p class="contact-note">Diese Platzhalter-Adresse später durch den Kontakt des Künstlers oder der Galerie ersetzen.</p>
+      <div class="contact-heading">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Schreiben Sie<br>eine Nachricht.</h1>
+        <p>Für Ausstellungen, Auftragsarbeiten und Atelierbesuche.</p>
+      </div>
+
+      <div class="contact-layout">
+        <aside class="contact-details" aria-labelledby="contact-details-title">
+          <p class="eyebrow" id="contact-details-title">Kontaktdetails</p>
+          <address>
+            <div class="contact-detail">
+              <span>E-Mail</span>
+              <a href="mailto:studio@example.com">studio@example.com</a>
+            </div>
+            <div class="contact-detail">
+              <span>Ortsadresse</span>
+              <p>Gilbert d'Orano<br>[Straße und Hausnummer]<br>[Postleitzahl und Ort]<br>[Land]</p>
+            </div>
+          </address>
+          <p class="contact-note">E-Mail-Adresse und Ortsadresse sind derzeit Platzhalter und müssen vor der Veröffentlichung ersetzt werden.</p>
+        </aside>
+
+        <form class="contact-form" action="mailto:studio@example.com" method="post" enctype="text/plain" data-recipient="studio@example.com">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Ihre E-Mail-Adresse</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject">Betreff</label>
+            <input id="contact-subject" name="subject" type="text" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message">Nachricht</label>
+            <textarea id="contact-message" name="message" rows="8" required></textarea>
+          </div>
+
+          <div class="contact-form__footer">
+            <button class="contact-submit" type="submit">Nachricht vorbereiten <span aria-hidden="true">↗</span></button>
+            <p>Öffnet die Nachricht in Ihrem E-Mail-Programm.</p>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
