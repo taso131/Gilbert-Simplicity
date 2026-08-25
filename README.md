@@ -13,10 +13,11 @@ Then open `http://localhost:8000`.
 
 ## Structure
 - `index.html` — home page (hero)
-- `work.html` — selected work gallery with lightbox
-- `about.html` — artist bio / statement
-- `notes.html` — studio note
-- `contact.html` — contact details
+- `work.html` — ausgewählte Werke mit Lightbox
+- `gemaeldekatalog.html` — anklickbarer Gemäldekatalog; wiederholbare Artikelstruktur für eine spätere Python-Generierung
+- `about.html` — Künstlerbiografie / Statement
+- `notes.html` — Ateliernotiz
+- `contact.html` — Kontaktdaten
 - `impressum.html` — legally required imprint (German law)
 - `datenschutzerklaerung.html` — privacy policy / GDPR notice (German law)
 - `css/styles.css` — design system and responsive layout

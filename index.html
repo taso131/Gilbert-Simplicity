@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of artist Gilbert d'Orano — selected works, studio notes, and contact.">
+  <meta name="description" content="Portfolio des Künstlers Gilbert d'Orano — ausgewählte Werke, Ateliernotizen und Kontakt.">
   <title>Gilbert d'Orano — Simplicity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,46 +11,87 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Gilbert d'Orano, home">Gilbert d'Orano</a>
+    <a class="brand" href="#top" aria-label="Gilbert d'Orano, Startseite">Gilbert d'Orano</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span>Menu</span>
+      <span>Menü</span>
     </button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="notes.html">Notes</a>
-      <a href="contact.html">Contact</a>
+    <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
+      <a href="work.html">Werke</a>
+      <a href="gemaeldekatalog.html">Gemäldekatalog</a>
+      <a href="about.html">Über mich</a>
+      <a href="notes.html">Notizen</a>
+      <a href="contact.html">Kontakt</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Visual artist</p>
+        <p class="eyebrow">Bildender Künstler</p>
         <h1 id="hero-title">Gilbert<br><em>d'Orano</em></h1>
-        <p class="hero-intro">An evolving body of work concerned with gesture, atmosphere, memory, and the spaces between forms.</p>
-        <a class="text-link" href="work.html">View selected work <span aria-hidden="true">↘</span></a>
+        <p class="hero-intro">Ein wachsendes Werk über Geste, Atmosphäre, Erinnerung und die Räume zwischen den Formen.</p>
+        <a class="text-link" href="work.html">Ausgewählte Werke ansehen <span aria-hidden="true">↘</span></a>
       </div>
 
-      <figure class="hero-art">
-        <img src="assets/hero-abstract.svg" alt="Abstract composition in charcoal, warm sand, rust and blue-grey">
-        <figcaption>Selected work · detail</figcaption>
-      </figure>
+      <div class="hero-art" role="region" aria-roledescription="Karussell" aria-label="Ausgewählte Gemälde">
+        <div class="hero-carousel-viewport">
+          <div class="hero-carousel-track">
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Vincent Van Gogh - Sternennacht.jpg" alt="Sternennacht von Vincent van Gogh">
+              <figcaption>Vincent van Gogh · Sternennacht</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Vincent Van Gogh - Sternennacht über der Rhone.jpg" alt="Sternennacht über der Rhone von Vincent van Gogh" loading="lazy">
+              <figcaption>Vincent van Gogh · Sternennacht über der Rhone</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Francisco Mayo - The-Colossus.jpg" alt="The Colossus von Francisco Mayo" loading="lazy">
+              <figcaption>Francisco Mayo · The Colossus</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Evard Munch - Der Schrei.jpg" alt="Der Schrei von Edvard Munch" loading="lazy">
+              <figcaption>Edvard Munch · Der Schrei</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Claude Monet - Wee Blue Coo.jpg" alt="Wee Blue Coo von Claude Monet" loading="lazy">
+              <figcaption>Claude Monet · Wee Blue Coo</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Claude Monet - Frau mit Sonnenschirm.jpg" alt="Frau mit Sonnenschirm von Claude Monet" loading="lazy">
+              <figcaption>Claude Monet · Frau mit Sonnenschirm</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Claude Monet - Der Strand und die Falaise d'Amont.jpg" alt="Der Strand und die Falaise d'Amont von Claude Monet" loading="lazy">
+              <figcaption>Claude Monet · Der Strand und die Falaise d'Amont</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="Kunstbilder/Caspar-David-Friedrich-The-Wanderer.jpg" alt="The Wanderer von Caspar David Friedrich" loading="lazy">
+              <figcaption>Caspar David Friedrich · The Wanderer</figcaption>
+            </figure>
+          </div>
+        </div>
 
-      <p class="hero-index" aria-hidden="true">01 / 04</p>
+        <div class="hero-carousel-controls">
+          <button class="hero-carousel-button hero-carousel-prev" type="button" aria-label="Vorheriges Gemälde">←</button>
+          <button class="hero-carousel-button hero-carousel-toggle" type="button" aria-label="Diashow pausieren">Ⅱ</button>
+          <button class="hero-carousel-button hero-carousel-next" type="button" aria-label="Nächstes Gemälde">→</button>
+        </div>
+      </div>
+
+      <p class="hero-index" aria-live="polite" aria-atomic="true">01 / 08</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Gilbert d'Orano</p>
-    <nav class="footer-nav" aria-label="Legal">
+    <nav class="footer-nav" aria-label="Rechtliches">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
     </nav>
-    <a href="#main">Back to top ↑</a>
+    <a href="#main">Nach oben ↑</a>
   </footer>
 
   <script src="js/main.js"></script>

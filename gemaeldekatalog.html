@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gemäldekatalog von Gilbert d'Orano — eine Übersicht ausgewählter Bilder.">
+  <title>Gemäldekatalog — Gilbert d'Orano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Gilbert d'Orano, Startseite">Gilbert d'Orano</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span>Menü</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
+      <a href="work.html">Werke</a>
+      <a href="gemaeldekatalog.html" aria-current="page">Gemäldekatalog</a>
+      <a href="about.html">Über mich</a>
+      <a href="notes.html">Notizen</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <p class="eyebrow">Archiv</p>
+        <h1 id="catalog-title">Gemäldekatalog</h1>
+        <p>Wählen Sie ein Gemälde aus, um es in der Detailansicht zu öffnen.</p>
+      </div>
+
+      <!--
+        Wiederholbares Basis-Template für die spätere Python-Generierung:
+        Pro Datensatz wird ein li > article > button mit data-catalog-id,
+        data-title, data-meta, data-image, Bildquelle und Alternativtext erzeugt.
+      -->
+      <ol class="catalog-list">
+        <li>
+          <article class="catalog-card" data-catalog-id="sternennacht">
+            <button class="art-button catalog-card__button" type="button" data-title="Sternennacht" data-meta="Vincent van Gogh" data-image="Kunstbilder/Vincent Van Gogh - Sternennacht.jpg" aria-label="Sternennacht öffnen">
+              <img src="Kunstbilder/Vincent Van Gogh - Sternennacht.jpg" alt="Sternennacht von Vincent van Gogh">
+            </button>
+            <div class="catalog-card__meta"><h2>Sternennacht</h2><p>Vincent van Gogh</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="sternennacht-ueber-der-rhone">
+            <button class="art-button catalog-card__button" type="button" data-title="Sternennacht über der Rhone" data-meta="Vincent van Gogh" data-image="Kunstbilder/Vincent Van Gogh - Sternennacht über der Rhone.jpg" aria-label="Sternennacht über der Rhone öffnen">
+              <img src="Kunstbilder/Vincent Van Gogh - Sternennacht über der Rhone.jpg" alt="Sternennacht über der Rhone von Vincent van Gogh" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>Sternennacht über der Rhone</h2><p>Vincent van Gogh</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="the-colossus">
+            <button class="art-button catalog-card__button" type="button" data-title="The Colossus" data-meta="Francisco Mayo" data-image="Kunstbilder/Francisco Mayo - The-Colossus.jpg" aria-label="The Colossus öffnen">
+              <img src="Kunstbilder/Francisco Mayo - The-Colossus.jpg" alt="The Colossus von Francisco Mayo" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>The Colossus</h2><p>Francisco Mayo</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="der-schrei">
+            <button class="art-button catalog-card__button" type="button" data-title="Der Schrei" data-meta="Edvard Munch" data-image="Kunstbilder/Evard Munch - Der Schrei.jpg" aria-label="Der Schrei öffnen">
+              <img src="Kunstbilder/Evard Munch - Der Schrei.jpg" alt="Der Schrei von Edvard Munch" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>Der Schrei</h2><p>Edvard Munch</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="wee-blue-coo">
+            <button class="art-button catalog-card__button" type="button" data-title="Wee Blue Coo" data-meta="Claude Monet" data-image="Kunstbilder/Claude Monet - Wee Blue Coo.jpg" aria-label="Wee Blue Coo öffnen">
+              <img src="Kunstbilder/Claude Monet - Wee Blue Coo.jpg" alt="Wee Blue Coo von Claude Monet" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>Wee Blue Coo</h2><p>Claude Monet</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="frau-mit-sonnenschirm">
+            <button class="art-button catalog-card__button" type="button" data-title="Frau mit Sonnenschirm" data-meta="Claude Monet" data-image="Kunstbilder/Claude Monet - Frau mit Sonnenschirm.jpg" aria-label="Frau mit Sonnenschirm öffnen">
+              <img src="Kunstbilder/Claude Monet - Frau mit Sonnenschirm.jpg" alt="Frau mit Sonnenschirm von Claude Monet" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>Frau mit Sonnenschirm</h2><p>Claude Monet</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="strand-falaise-amont">
+            <button class="art-button catalog-card__button" type="button" data-title="Der Strand und die Falaise d'Amont" data-meta="Claude Monet" data-image="Kunstbilder/Claude Monet - Der Strand und die Falaise d'Amont.jpg" aria-label="Der Strand und die Falaise d'Amont öffnen">
+              <img src="Kunstbilder/Claude Monet - Der Strand und die Falaise d'Amont.jpg" alt="Der Strand und die Falaise d'Amont von Claude Monet" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>Der Strand und die Falaise d'Amont</h2><p>Claude Monet</p></div>
+          </article>
+        </li>
+
+        <li>
+          <article class="catalog-card" data-catalog-id="the-wanderer">
+            <button class="art-button catalog-card__button" type="button" data-title="The Wanderer" data-meta="Caspar David Friedrich" data-image="Kunstbilder/Caspar-David-Friedrich-The-Wanderer.jpg" aria-label="The Wanderer öffnen">
+              <img src="Kunstbilder/Caspar-David-Friedrich-The-Wanderer.jpg" alt="The Wanderer von Caspar David Friedrich" loading="lazy">
+            </button>
+            <div class="catalog-card__meta"><h2>The Wanderer</h2><p>Caspar David Friedrich</p></div>
+          </article>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Gilbert d'Orano</p>
+    <nav class="footer-nav" aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+    </nav>
+    <a href="#main">Nach oben ↑</a>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Gemäldevorschau">
+    <button class="lightbox-close" type="button" aria-label="Gemäldevorschau schließen">Schließen ×</button>
+    <div class="lightbox-inner">
+      <img src="" alt="">
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
